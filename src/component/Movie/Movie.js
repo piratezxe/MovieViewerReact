@@ -12,6 +12,30 @@ export const Movie = ({movie}) => {
             <div>
                 Year {movie.Year}
             </div>
+            <div>
+                Rank {movie.Value}
+            </div>
+            <div>
+                Runtime {movie.Runtime}
+            </div>
+            <div>
+                Genre: {movie.Genre}
+            </div>
+            <div>
+                Movie: {movie.Director}
+            </div>
+            <div>
+                Language: {movie.Language}
+            </div>
+            <div>
+                ImbdbRanking: {movie.imdbRating}
+            </div>
+            <div>
+                imdbVotes : {movie.imdbVotes}
+            </div>
+            <div>
+                Type: {movie.Type}
+            </div>
         </div>
     )
 };
