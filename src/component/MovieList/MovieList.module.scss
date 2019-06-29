@@ -1,0 +1,19 @@
+ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li{
+  list-style-type: none;
+}
+
+@media all and (max-width: 800px) {
+  ul{
+    justify-content: center;
+  }
+}
+.container {
+
+}

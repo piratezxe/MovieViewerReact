@@ -1,15 +1,18 @@
 import React from 'react';
-
+import Movie from './../Movie/Movie';
+import './MovieList.module.scss';
 
 export const MovieList = ({movies}) => {
 
-    const moviemaplist = movies.map(movie => <li key={movie.imdbID}>
-        {movie.Title}
-        {movie.Year}
+    const moviemaplist = movies.Search.map(movie => <li key={movie.imdbID}>
+        <Movie movie={movie}/>
     </li>);
 
-    return <ul>
-        {moviemaplist}
-    </ul>
+    return (
+        <div className="container">
+            <ul>
+                {moviemaplist}
+            </ul>
+        </div>
+    );
 };
-

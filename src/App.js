@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.module.scss';
-import {Movie} from "./component/Movie/Movie";
 import AppNavbar from "./component/navbar/navbar";
+import {MovieList} from "./component/MovieList/MovieList";
 
 class App extends React.Component {
 
@@ -15,7 +15,7 @@ class App extends React.Component {
     }
 
     handleSearchMovieByPressButton(text) {
-        const url = 'http://www.omdbapi.com/?t=' + text + "&apikey=be4aa4e6";
+        const url = 'http://www.omdbapi.com/?s=' + text + "&apikey=be4aa4e6";
         fetch(url)
             .then(data => data.json())
             .then(x => {
@@ -47,7 +47,7 @@ class App extends React.Component {
             return (
                 <div>
                     <AppNavbar handleSearch={this.handleSearchMovieByPressButton}/>
-                    <Movie movie={this.state.movie}/>
+                    <MovieList movies={this.state.movie}/>
                 </div>
             )
         }
